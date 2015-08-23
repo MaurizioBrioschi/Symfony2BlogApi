@@ -1,5 +1,4 @@
 # Symfony2BlogApi
-====================
 "Blog" Api to insert data in a mysql database with these functions:
 - Create a topic
 - Delete a topic
