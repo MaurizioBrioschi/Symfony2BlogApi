@@ -1,0 +1,9 @@
+ridesoft\TopicsApiBundle\Entity\Topic:
+    exclusion_polici: ALL
+    properties:
+        id:
+            expose: true
+        title:
+            expose: true
+        articles:
+            expose: true

@@ -1,0 +1,11 @@
+ridesoft\TopicsApiBundle\Entity\Article:
+    exclusion_polici: ALL
+    properties:
+        id:
+            expose: true
+        title:
+            expose: true
+        author:
+            expose: true
+        text:
+            expose: true

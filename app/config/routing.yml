@@ -1,0 +1,9 @@
+topic:
+    type: rest
+    prefix: /api
+    resource:   ridesoft\TopicsApiBundle\Controller\TopicController
+
+article:
+    type: rest
+    prefix: /api
+    resource:   ridesoft\TopicsApiBundle\Controller\ArticleController
