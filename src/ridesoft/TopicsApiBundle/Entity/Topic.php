@@ -83,6 +83,13 @@ class Topic extends AbstractEntity implements EntityInterface
         return $this->articles;
     }
 
+    /**
+     * Get all  topics
+     * @return array
+     * @throws DBALException
+     * @throws \Doctrine\DBAL\DBALException
+     * @throws \Exception
+     */
     public function getAll()
     {
         try{
@@ -98,6 +105,14 @@ class Topic extends AbstractEntity implements EntityInterface
 
     }
 
+    /**
+     * get the topic with $id
+     * @param $id
+     * @return array
+     * @throws DBALException
+     * @throws \Doctrine\DBAL\DBALException
+     * @throws \Exception
+     */
     public function get($id)
     {
         try{
@@ -113,6 +128,14 @@ class Topic extends AbstractEntity implements EntityInterface
         }
     }
 
+    /**
+     * Get the topic with $id and its related articles
+     * @param $id
+     * @return array
+     * @throws DBALException
+     * @throws \Doctrine\DBAL\DBALException
+     * @throws \Exception
+     */
     public function getTopicWithArticles($id)   {
         try {
             $query = "SELECT t.id as TopicId, t.title as TopicTitle, a.* FROM topics t "
@@ -142,6 +165,16 @@ class Topic extends AbstractEntity implements EntityInterface
             throw $e;
         }
     }
+
+    /**
+     * Delete  the topic with $id
+     * @param $id
+     * @return bool
+     * @throws DBALException
+     * @throws \Doctrine\DBAL\ConnectionException
+     * @throws \Doctrine\DBAL\DBALException
+     * @throws \Exception
+     */
     public function delete($id)
     {
         try{
@@ -164,6 +197,13 @@ class Topic extends AbstractEntity implements EntityInterface
         }
     }
 
+    /**
+     * Insert the current  topic
+     * @return $this
+     * @throws DBALException
+     * @throws \Doctrine\DBAL\DBALException
+     * @throws \Exception
+     */
     public function insert()
     {
         try{
@@ -174,7 +214,8 @@ class Topic extends AbstractEntity implements EntityInterface
             $statement->execute();
             $this->id = $this->connection->lastInsertId();
 
-            /*if(count($this->articles)>0) {
+            /* is just an idea... not implemented yet
+             * if(count($this->articles)>0) {
                 $queryJoin = "INSERT INTO topics_articles(topic_id,article_id) VALUES (:topic_id,:article_id);";
                 $statement->bindValue("topic_id", $this->getId());
                 foreach ($this->articles as $article) {

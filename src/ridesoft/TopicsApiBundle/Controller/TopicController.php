@@ -19,7 +19,7 @@ class TopicController extends FOSRestController
 {
 
     /**
-     * Lists all articles entities.
+     * Lists all topics
      * @return array
      */
     public function getTopicsAction()
@@ -36,7 +36,7 @@ class TopicController extends FOSRestController
     }
 
     /**
-     *
+     * Get the topic with $id
      * @param $id
      * @return array
      * @internal param $id
@@ -52,6 +52,13 @@ class TopicController extends FOSRestController
         }
     }
 
+    /**
+     * List the topic with $id with all  its articles related
+     * @param $id
+     * @return array|int
+     * @throws \Exception
+     * @throws \ridesoft\TopicsApiBundle\Entity\DBALException
+     */
     public function getTopicsArticlesAction($id)    {
         try{
             $em = $this->getDoctrine()->getManager();
@@ -63,6 +70,7 @@ class TopicController extends FOSRestController
         }
     }
     /**
+     * Post a new Topic
      * @param Request $request
      */
     public function postTopicsAction(Request $request){
@@ -95,6 +103,7 @@ class TopicController extends FOSRestController
     }
 
     /**
+     * Delete the topic with $id
      * @param $id
      */
     public function deleteTopicsAction($id)   {

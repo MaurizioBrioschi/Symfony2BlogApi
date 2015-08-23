@@ -19,7 +19,7 @@ class ArticleController extends FOSRestController
 {
 
     /**
-     * Lists all articles entities.
+     * Lists all articles.
      * @return array
      */
     public function getArticlesAction()
@@ -36,7 +36,7 @@ class ArticleController extends FOSRestController
     }
 
     /**
-     *
+     * List the article with $id
      * @param $id
      * @return array
      * @internal param Article $article
@@ -53,6 +53,7 @@ class ArticleController extends FOSRestController
     }
 
     /**
+     * Post an article
      * @param Request $request
      */
     public function postArticleAction(Request $request){
@@ -85,6 +86,7 @@ class ArticleController extends FOSRestController
     }
 
     /**
+     * Delete the article with $id
      * @param Article $article
      */
     public function deleteArticleAction($id)   {

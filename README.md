@@ -11,11 +11,13 @@
 - List all articles from a topic
 - Show a specific article
 
-##INSTALL (form linux)
+##INSTALL (from linux)
 - ```$ composer install```
 - Restore mysql database structure ```$  mysql -uUser -pMyPassword blog < blog_structure.sql```
 - Configure database parameters inside *app/config/parameters.yml*
-- See the routes in symfony for the application: ```$ php app/console router:debug```
+- See the routes in symfony for the application: ```$ php app/console router:debug``` 
+  
+  All the routes with **/api/** prefix are for the API.  
 
 ##Run test with 
 ```
