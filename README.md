@@ -11,6 +11,7 @@
 - Show a specific article
 
 ##INSTALL (from linux)
+- Clone this repo: ```$ git clone git@github.com:ridesoft/Symfony2BlogApi.git```
 - Create a schema into database, for exemple use the name *blog*
 - Restore mysql database structure ```$  mysql -uUser -pMyPassword blog < blog_structure.sql```
 - ```$ composer install```
