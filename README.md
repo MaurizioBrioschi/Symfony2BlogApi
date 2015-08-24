@@ -18,7 +18,10 @@
 - Configure database parameters inside *app/config/parameters.yml*
 - See the routes in symfony for the application: ```$ php app/console router:debug``` 
   
-  All the routes with **/api/** prefix are for the API.  
+  All the routes with **/api/** prefix are for the API.
+  
+  The parameter **{_format}** in the route is the format of the output, this can be **json**,**xml**,**html** 
+  
 
 ##Run test with 
 ```
