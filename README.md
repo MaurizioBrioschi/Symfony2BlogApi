@@ -11,8 +11,9 @@
 - Show a specific article
 
 ##INSTALL (from linux)
-- ```$ composer install```
+- Create a schema into database, for exemple use the name *blog*
 - Restore mysql database structure ```$  mysql -uUser -pMyPassword blog < blog_structure.sql```
+- ```$ composer install```
 - Configure database parameters inside *app/config/parameters.yml*
 - See the routes in symfony for the application: ```$ php app/console router:debug``` 
   
