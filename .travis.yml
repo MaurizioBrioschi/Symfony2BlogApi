@@ -1,4 +1,7 @@
 language: php
 php:
 - 5.4
+before_script:
+  - php app/console doctrine:schema:create
+  - mysql -uroot blog < blog_structure.sql
 script: phpunit -c app
