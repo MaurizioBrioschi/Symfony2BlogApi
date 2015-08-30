@@ -2,6 +2,9 @@ language: php
 php:
 - 5.4
 before_script:
+  - composer install
+  - chmod -Rf 777 app/cache
+  - chmod -Rf 777 app/logs
   - php app/console doctrine:schema:create
   - mysql -uroot blog < blog_structure.sql
 script: phpunit -c app
