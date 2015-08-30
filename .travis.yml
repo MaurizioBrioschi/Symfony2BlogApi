@@ -8,4 +8,4 @@ before_script:
   - mv app/config/parameters.yml.dist parameters.yml
   - php app/console doctrine:database:create
   - mysql -uroot symfony < blog_structure.sql
-script: phpunit -c app --codecoverage
+script: phpunit -c app --coverage-text
