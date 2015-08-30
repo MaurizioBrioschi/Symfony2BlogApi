@@ -5,6 +5,7 @@ before_script:
   - composer install
   - chmod -Rf 777 app/cache
   - chmod -Rf 777 app/logs
+  - mv app/config/parameters.yml.dist parameters.yml
   - php app/console doctrine:schema:create
-  - mysql -uroot blog < blog_structure.sql
+  - mysql -uroot symfony < blog_structure.sql
 script: phpunit -c app
