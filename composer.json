@@ -1,0 +1,13 @@
+{
+    "name": "ridesoft/topics-api-bundle",
+    "description": "Bundle to manage topics and relate articles via API",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Maurizio Brioschi",
+            "email": "maurizio.brioschi@ridesoft.org"
+        }
+    ],
+    "require": {}
+}
